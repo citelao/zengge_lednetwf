@@ -1,0 +1,9 @@
+[project]
+name = "zengge-lednetwf"
+version = "0.1.0"
+description = "Control Zengge LED devices over BLE"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "simplepyble>=0.10.1",
+]

@@ -1,0 +1,57 @@
+version = 1
+requires-python = ">=3.10"
+
+[[package]]
+name = "simplepyble"
+version = "0.10.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/18/8c/12ba691a3a9c7c3c94e0d76bb66d0f9c18b8116b1d13141ca83aa1ca37b4/simplepyble-0.10.1.tar.gz", hash = "sha256:39c4270624d75eadeff54c0eea6ee5cc4f403232c391442a47dad1b854caf531", size = 102430 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/85/2c/7917ee479916460803c55504212b6486c24631b433b833147017905d2432/simplepyble-0.10.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:51e01bfac7b95012647d8125870cfa53d2d9dec6e7edc2e53fd4e1a3f9d7cfaa", size = 195784 },
+    { url = "https://files.pythonhosted.org/packages/40/ce/d8c865d1131ab55d9de663f0384ff1765fa3cd5ca94d197ff5529513b9aa/simplepyble-0.10.1-cp310-cp310-macosx_11_0_universal2.whl", hash = "sha256:d88fdfc666de6536ab9e56c7869d02c8522ca21b853cb8b2a4ffd845dfa0aeb9", size = 409691 },
+    { url = "https://files.pythonhosted.org/packages/86/42/0d099ea2eb14482c00f504f6adf88c777a37ad38492b9fb5606cac714bb9/simplepyble-0.10.1-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:7cfc8a97160cf6247e70967f1417f0e584fc54f0acd42ff76fc82643967eec07", size = 219252 },
+    { url = "https://files.pythonhosted.org/packages/8c/9d/8dfcbcc20c4e1c69acfb593b9dea5fcbeaddec2883a12e872e79889ec60e/simplepyble-0.10.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b1581e517603c0dd4f7833b43c12bca9a29fd0e171f8ed576101e38f8d735e8a", size = 1512295 },
+    { url = "https://files.pythonhosted.org/packages/dc/1d/01f1a5ec1e17c23621b677764db7d2fc71292e4a46d8aa42b8d6719981b8/simplepyble-0.10.1-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:1fa4121204194c0cbb20f677cb59e709e71fd60cd890b90592e92b39fdfce03e", size = 1640529 },
+    { url = "https://files.pythonhosted.org/packages/9c/8d/4ac4abd45a26296e9f9b392f8ecdc3cd768fd825eb6576d4cc85c0582ca0/simplepyble-0.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:185840c7c2e0587d42dfacf18d2bd19d4204c097b1ead04b18324b676b990f39", size = 1603042 },
+    { url = "https://files.pythonhosted.org/packages/34/f9/2042566e269f4e8d98fa1756b904442265847c8d68efe997e12b019e219b/simplepyble-0.10.1-cp310-cp310-win32.whl", hash = "sha256:c488ae00bfa37e3367fefc305ca541491703978af7bbbce26a1a26ee2927632c", size = 221139 },
+    { url = "https://files.pythonhosted.org/packages/26/b6/bbd84f2734ec3018e1af229302bc0476600bcdc40c993aba2cf3a4c3c343/simplepyble-0.10.1-cp310-cp310-win_amd64.whl", hash = "sha256:f19da28b653a45fd879f4eba895d2eb270630a9c1bdb5a05b455460ff1857ecf", size = 247833 },
+    { url = "https://files.pythonhosted.org/packages/58/88/3069899fbe911313382f72abf7bd19e460f3d8c6b288dd6b31b25554168b/simplepyble-0.10.1-cp310-cp310-win_arm64.whl", hash = "sha256:d355f435f37e5cac6b730a9ede7cb71c8aba44cd54db735da70230cc1226651b", size = 239825 },
+    { url = "https://files.pythonhosted.org/packages/08/e2/5b804a6a2b19374f71b860a194e1b9722d1dbdb622ceda21002f52a14234/simplepyble-0.10.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:ecb9fcc68f840c5fcc2f81dd7ad9332517b007990aebc853557d98337ad6d162", size = 196998 },
+    { url = "https://files.pythonhosted.org/packages/25/9c/9826be311698a5b9572a4ad1d8249a1387fbda9642291c9b7b2a56bedaa3/simplepyble-0.10.1-cp311-cp311-macosx_11_0_universal2.whl", hash = "sha256:bcba1be56043bb0c604a8f93adbc6da69ae51113047d9bc7bbe2ebe73289e2fc", size = 412785 },
+    { url = "https://files.pythonhosted.org/packages/a4/3a/86ff3d06cc393294cf15e9a8173bc596ae2d6525418c4b5d219bd0eb7d4b/simplepyble-0.10.1-cp311-cp311-macosx_11_0_x86_64.whl", hash = "sha256:da3d95f722f0c544bce5c41b89a647b5158390004709b4602e11ef7f5db0cba0", size = 220713 },
+    { url = "https://files.pythonhosted.org/packages/92/c4/0045184635ce6cd5668b1da2f4e3c2a12f5f2fbd138388e8e965f3b5eccb/simplepyble-0.10.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8ec0a5a2ed13de9c055b5ee154abfe7386fd0a66b15b19122697fa6d2d834554", size = 1514318 },
+    { url = "https://files.pythonhosted.org/packages/ce/3b/b5705f9d2ac07420851fa492019e402dce57ebf0f353fff15b512f0790a4/simplepyble-0.10.1-cp311-cp311-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:76799fd99726eafc87b6a42fbe9985e2dad8876db2ea05bf17353715929e28d7", size = 1641846 },
+    { url = "https://files.pythonhosted.org/packages/57/e9/b80f27fa03b25380ba504d53ae60b3bc6dc6b132d282478ff9978f9b75d6/simplepyble-0.10.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d03c31501cafd0328fb96b19130671e71f46188d27e72d4acbdca239a27e2895", size = 1604988 },
+    { url = "https://files.pythonhosted.org/packages/01/8f/26f5ba1d9148e67189bac417c10ea9b3d7dd8e8f3d868c9551027d3d4d71/simplepyble-0.10.1-cp311-cp311-win32.whl", hash = "sha256:16baec4a651e5a70fc581417e58e012378d501c0876236f132d73cb2c00a73a9", size = 222133 },
+    { url = "https://files.pythonhosted.org/packages/37/0a/60eb1bbe13484a9fc37bb27d86f47e018ede989760f3b15cc2536f878c75/simplepyble-0.10.1-cp311-cp311-win_amd64.whl", hash = "sha256:6dee710a11c307539e8c6512d54d7c64021eb72794dd021ea9c69c3a912ab49e", size = 248859 },
+    { url = "https://files.pythonhosted.org/packages/73/f1/c63cde2567950fad0167ea67d6d535647cc48b24f9a16bbdb09c3f264c93/simplepyble-0.10.1-cp311-cp311-win_arm64.whl", hash = "sha256:6651f668e796003b63b80cbea922177907e0e6f4218c7c6e3571e89e9fa8a4e7", size = 240432 },
+    { url = "https://files.pythonhosted.org/packages/b6/f3/15e298718025f95bf9a1d1edb6dbf49f36ad20bbc18c3062037ed3014780/simplepyble-0.10.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:30e0e446625a2d260c9eacfb5c635c2bd3027eb75a65fe3d53f0bb6958b5349e", size = 197507 },
+    { url = "https://files.pythonhosted.org/packages/24/db/24671b011e7f6e581d920e2b98e318e257084a150617197a6f69b1470a30/simplepyble-0.10.1-cp312-cp312-macosx_11_0_universal2.whl", hash = "sha256:f41175be4f1e77ee03126756081e2ae3b90a118dd48282e81f969e9ad3e26966", size = 414951 },
+    { url = "https://files.pythonhosted.org/packages/db/98/291c0a7c934d43f98ac4d23649917632d6d44fb7586e933b694f674713c6/simplepyble-0.10.1-cp312-cp312-macosx_11_0_x86_64.whl", hash = "sha256:1d555b71ded8196f1f211cfa6ac23b1040b6c158020b1882a6ac61f876c1ccfb", size = 222226 },
+    { url = "https://files.pythonhosted.org/packages/4e/98/a286626c56c2c4f97e5924f53ee8dba3b9ee0d63435deec5fc2528ff7661/simplepyble-0.10.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0f0c6765a95b8cdecba2bcbc843b01799465fc17b64ea3ef4a580c0e2fe52686", size = 1513101 },
+    { url = "https://files.pythonhosted.org/packages/2c/25/24a9dd305e01d2bcabb0393dfd7e2c03f3c17e6e27c6cd6534546e1dc362/simplepyble-0.10.1-cp312-cp312-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:9a4efcb854b304717623fe6905a4b5d4acd7b00e622ec3160634ec425db369ad", size = 1641194 },
+    { url = "https://files.pythonhosted.org/packages/7f/48/ba2edf4d319dd0dec8895ac6934fe609ef2217fd692a807cd51216cb10cb/simplepyble-0.10.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3f6a578db4eda456cafd3168be47ab0c324ea179c7c1c997380a34bdb8aab2be", size = 1603200 },
+    { url = "https://files.pythonhosted.org/packages/97/43/7233d102b3f4b6e7c595c60a5e8335b7c7d30d18113bad52a43c1ccf22f0/simplepyble-0.10.1-cp312-cp312-win32.whl", hash = "sha256:2722f6131c7be194676659c61b2f52a4824e53f4a7cdddfd02195b5f6f5a0cf8", size = 221713 },
+    { url = "https://files.pythonhosted.org/packages/4e/61/fe78939e9a79987f077cd9316db4c6f0d9f0b1bc2c31323e5f5552e61c90/simplepyble-0.10.1-cp312-cp312-win_amd64.whl", hash = "sha256:3debc96d714d1f4ce3f60b48c3e1d1a2155c42d7daf116dc47bc34a03fd37c90", size = 249827 },
+    { url = "https://files.pythonhosted.org/packages/41/da/f6c6f01bbd8d76451e4b13a533d2340fbed49c271fe1341535d26a479418/simplepyble-0.10.1-cp312-cp312-win_arm64.whl", hash = "sha256:36737ac3844c03f12d0021a267670106c0ab624f29809fac6ebf1ecf844faf8f", size = 237069 },
+    { url = "https://files.pythonhosted.org/packages/df/a6/7e5cadb5d3af1d228a2c2e5954c3401f1cfc6fda402943461df581f0a58e/simplepyble-0.10.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:7f076e22a1c8f384457bc05c9e1bf0449a1fe75df90f11ef185f44212c067760", size = 197569 },
+    { url = "https://files.pythonhosted.org/packages/e2/4c/c979ade7c924c4a5b74124eec55f756ec8318be2d84a0c9ef3f0018e9cca/simplepyble-0.10.1-cp313-cp313-macosx_11_0_universal2.whl", hash = "sha256:97d9585d93acdc5ae7e001b81097fca84977e874e9ed9bd6aecfba27237157ea", size = 415082 },
+    { url = "https://files.pythonhosted.org/packages/1f/71/e86a85433db4758cc3f69c3c1cc9b3d8a172c609741d25f60460732c4aba/simplepyble-0.10.1-cp313-cp313-macosx_11_0_x86_64.whl", hash = "sha256:495c21ed4216b7be2c2be1d7e4b3413ac7a491b870353357c1c34d8acb6494ab", size = 222287 },
+    { url = "https://files.pythonhosted.org/packages/2e/e9/a524556063db3afbd7628e11fe3977a5019d90ff746da36562ae15ea0022/simplepyble-0.10.1-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c654325769a824c6981712938bcc0d05b685a43d0348d1d9209b2822dcca2278", size = 1512804 },
+    { url = "https://files.pythonhosted.org/packages/68/76/cbee2a98fe870f76a685197ed8c23a4027755d60afea89bd40940a04252f/simplepyble-0.10.1-cp313-cp313-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:090fafc4b3e88474b72ea3e0a5f5ded158f5ca39d63f98f9651f0e8a7cb3c82e", size = 1641091 },
+    { url = "https://files.pythonhosted.org/packages/22/8c/d23efd74c3e0d45b7dc3093fd8c2383266e3b80227d411bcdd0ab6d5781d/simplepyble-0.10.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:561693db73dc73f65c83905dc126855422a2b4abf1e5a54c15b22c94e732e6b6", size = 1604169 },
+    { url = "https://files.pythonhosted.org/packages/a8/0f/3860343847c299b07a694b82d90fa75a1f94ff14b5c7c938d5fa8590676d/simplepyble-0.10.1-cp313-cp313-win32.whl", hash = "sha256:13ee80730ef5e4fb12b68b811624ff4fd02fffb1d8054be0c80ef146fdd3df76", size = 221806 },
+    { url = "https://files.pythonhosted.org/packages/2f/de/cac26a19b97fc2bb8b88a28ae464220bc67c21c89fe6d93db9ab7a802298/simplepyble-0.10.1-cp313-cp313-win_amd64.whl", hash = "sha256:cdbe28b9554b94b6ca330fe63dfb563e5b7120c454cf4a8da041f698464cc0b2", size = 249785 },
+    { url = "https://files.pythonhosted.org/packages/1d/fd/45967f215fd3a2ac61fbdd4beae9a84fe068f8ac10172e60ee4656c32890/simplepyble-0.10.1-cp313-cp313-win_arm64.whl", hash = "sha256:256e518ecffabe332d67975bb301c978703a7be78251230aeacbbd9f4ab1f93c", size = 237160 },
+]
+
+[[package]]
+name = "zengge-lednetwf"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "simplepyble" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "simplepyble", specifier = ">=0.10.1" }]
