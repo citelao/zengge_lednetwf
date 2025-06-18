@@ -16,49 +16,62 @@ def set_counter(packet: bytearray):
     counter += 1
     return packet
 
+def set_checksum(packet: bytearray):
+    # The checksum is the last byte of the packet.
+    # It is the sum of bytes 8 until end (excluding the checksum byte) modulo 256.
+    original_checksum = packet[-1]
+    packet[-1] = 0  # Reset checksum byte
+    checksum = sum(packet[8:]) % 256
+    packet[-1] = checksum
+    if original_checksum != checksum:
+        print(f'Checksum mismatch: original {original_checksum:02x}, calculated {checksum:02x}')
+    else:
+        print(f'Checksum matches: {checksum:02x}')
+    return packet
+
 # Needs this to reset the counter (?).
 def create_initial_packet():
     base = bytearray.fromhex('0001 8000 000C 0D0B 1014 1906 1114 2331 0200 0FCD')
     packet = base[:]
-    return set_counter(packet)
+    return set_checksum(set_counter(packet))
 
 def create_red_packet():
     base = bytearray.fromhex('0001 8000 000D 0E0B 3BA1 B464 6400 0000 0014 0000 6C')
     packet = base[:]
-    return set_counter(packet)
+    return set_checksum(set_counter(packet))
 
 def create_purple_packet():
     base = bytearray.fromhex('0002 8000 000D 0E0B 3BA1 9664 6400 0000 0014 0000 4E')
     packet = base[:]
-    return set_counter(packet)
+    return set_checksum(set_counter(packet))
 
 # Interesting note: I have a trace on another computer, but Copilot was able to
 # guess these next 4 packets correctly, without knowing what colors they were.
 def create_blue_packet():
     base = bytearray.fromhex('0003 8000 000D 0E0B 3BA1 7864 6400 0000 0014 0000 30')
     packet = base[:]
-    return set_counter(packet)
+    return set_checksum(set_counter(packet))
 
 def create_cyan_packet():
     base = bytearray.fromhex('0004 8000 000D 0E0B 3BA1 5A64 6400 0000 0014 0000 12')
     packet = base[:]
-    return set_counter(packet)
+    return set_checksum(set_counter(packet))
 
 def create_green_packet():
     base = bytearray.fromhex('0005 8000 000D 0E0B 3BA1 3C64 6400 0000 0014 0000 F4')
     packet = base[:]
-    return set_counter(packet)
+    return set_checksum(set_counter(packet))
 
 def create_yellow_packet():
     base = bytearray.fromhex('0006 8000 000D 0E0B 3BA1 1E64 6400 0000 0014 0000 D6')
     packet = base[:]
-    return set_counter(packet)
+    return set_checksum(set_counter(packet))
 
 # TODO: wrong
 def create_white_packet():
     base = bytearray.fromhex('0007 8000 000D 0E0B 3BA1 0064 6400 0000 0014 0000 B8')
     packet = base[:]
-    return set_counter(packet)
+    return set_checksum(set_counter(packet))
 
 async def main():
     device = await BleakScanner.find_device_by_address(address)
