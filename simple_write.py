@@ -1,10 +1,11 @@
 import asyncio
 from bleak import BleakClient, BleakScanner
 
-
 # Add your device's address here.
 # Can be UUID or MAC address
 address = '08:65:f0:a5:a9:b7'
+
+COLOR_UUID = '0000ff01-0000-1000-8000-00805f9b34fb'
 
 counter = 1
 
@@ -42,56 +43,73 @@ async def main():
     async with BleakClient(device) as client:
         print(f'Client connection = {client.is_connected}') # prints True or False
 
-        for service in client.services:
-            print(f'Service: {service}')
+        ip = create_initial_packet()
+        print(f'Writing initial packet: {ip.hex()}')
+        await client.write_gatt_char(COLOR_UUID, ip)
+        await asyncio.sleep(1)
 
-            for char in service.characteristics:
-                print(f'  Characteristic: {char}')
+        # 5 times:
+        for _ in range(5):
+            rp = create_red_packet()
+            print(f'Writing red packet: {rp.hex()}')
+            await client.write_gatt_char(COLOR_UUID, rp)
+            await asyncio.sleep(1)
 
-                try:
-                    ip = create_initial_packet()
-                    print(f'  Writing to characteristic {char.uuid} with packet: {ip.hex()}')
-                    await client.write_gatt_char(
-                        char,
-                        ip
-                    )
+            bp = create_blue_packet()
+            print(f'Writing blue packet: {bp.hex()}')
+            await client.write_gatt_char(COLOR_UUID, bp)
+            await asyncio.sleep(1)
 
-                    rp = create_red_packet()
-                    print(f'  Writing to characteristic {char.uuid} with packet: {rp.hex()}')
-                    await client.write_gatt_char(
-                        char,
-                        # '0000ff01-0000-1000-8000-00805f9b34fb',
-                        # '0000ff02-0000-1000-8000-00805f9b34fb',
-                        # '0000ff01-0000-1000-8000-00805f9b34fb',
+        # for service in client.services:
+        #     print(f'Service: {service}')
 
-                        # # 0066 8000 000D 0E0B 3BA1 B464 6400 0000
-                        # bytearray.fromhex('00668000000d0e0b3ba1b46464000000')
-                        # 0001 8000 000D 0E0B 3BA1 B464 6400 0000
-                        rp
-                    )
+        #     for char in service.characteristics:
+        #         print(f'  Characteristic: {char}')
 
-                    await asyncio.sleep(1)
+        #         try:
+        #             ip = create_initial_packet()
+        #             print(f'  Writing to characteristic {char.uuid} with packet: {ip.hex()}')
+        #             await client.write_gatt_char(
+        #                 char,
+        #                 ip
+        #             )
 
-                    bp = create_blue_packet()
-                    print(f'  Writing to characteristic {char.uuid} with packet: {bp.hex()}')
-                    await client.write_gatt_char(
-                        char,
-                        bp
-                    )
+        #             rp = create_red_packet()
+        #             print(f'  Writing to characteristic {char.uuid} with packet: {rp.hex()}')
+        #             await client.write_gatt_char(
+        #                 char,
+        #                 # '0000ff01-0000-1000-8000-00805f9b34fb',
+        #                 # '0000ff02-0000-1000-8000-00805f9b34fb',
+        #                 # '0000ff01-0000-1000-8000-00805f9b34fb',
 
-                    await asyncio.sleep(1)
+        #                 # # 0066 8000 000D 0E0B 3BA1 B464 6400 0000
+        #                 # bytearray.fromhex('00668000000d0e0b3ba1b46464000000')
+        #                 # 0001 8000 000D 0E0B 3BA1 B464 6400 0000
+        #                 rp
+        #             )
 
-                    rp2 = create_red_packet()
-                    print(f'  Writing to characteristic {char.uuid} with packet: {rp2.hex()}')
-                    await client.write_gatt_char(
-                        char,
-                        rp2
-                    )
+        #             await asyncio.sleep(1)
 
-                    await asyncio.sleep(1)
+        #             bp = create_blue_packet()
+        #             print(f'  Writing to characteristic {char.uuid} with packet: {bp.hex()}')
+        #             await client.write_gatt_char(
+        #                 char,
+        #                 bp
+        #             )
 
-                except Exception as e:
-                    print(f'Error writing to characteristic {char.uuid}: {e}')
+        #             await asyncio.sleep(1)
+
+        #             rp2 = create_red_packet()
+        #             print(f'  Writing to characteristic {char.uuid} with packet: {rp2.hex()}')
+        #             await client.write_gatt_char(
+        #                 char,
+        #                 rp2
+        #             )
+
+        #             await asyncio.sleep(1)
+
+        #         except Exception as e:
+        #             print(f'Error writing to characteristic {char.uuid}: {e}')
 
 
 if __name__ == "__main__":
