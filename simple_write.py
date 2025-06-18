@@ -9,7 +9,7 @@ address = '08:65:f0:a5:a9:b7'
 counter = 1
 
 def create_initial_packet():
-    base = bytearray.fromhex('0001 8000 000C 0D0B 1014 1906 1114 2331')
+    base = bytearray.fromhex('0001 8000 000C 0D0B 1014 1906 1114 2331 0200 0FCD')
     packet = base[:]
     global counter
     packet[1] = counter & 0xff
@@ -18,7 +18,7 @@ def create_initial_packet():
     return packet
 
 def create_red_packet():
-    base = bytearray.fromhex('0001 8000 000D 0E0B 3BA1 B464 6400 0000')
+    base = bytearray.fromhex('0001 8000 000D 0E0B 3BA1 B464 6400 0000 0014 0000 6C')
     packet = base[:]
     global counter
     packet[1] = counter & 0xff
@@ -27,7 +27,7 @@ def create_red_packet():
     return packet
 
 def create_blue_packet():
-    base = bytearray.fromhex('0002 8000 000D 0E0B 3BA1 9664 6400 0000')
+    base = bytearray.fromhex('0002 8000 000D 0E0B 3BA1 9664 6400 0000 0014 0000 4E')
     packet = base[:]
     global counter
     # Update the correct indices for the counter (swap 3 and 4 if needed)
@@ -77,6 +77,15 @@ async def main():
                     await client.write_gatt_char(
                         char,
                         bp
+                    )
+
+                    await asyncio.sleep(1)
+
+                    rp2 = create_red_packet()
+                    print(f'  Writing to characteristic {char.uuid} with packet: {rp2.hex()}')
+                    await client.write_gatt_char(
+                        char,
+                        rp2
                     )
 
                     await asyncio.sleep(1)
