@@ -22,11 +22,20 @@ For development, you can use `uv`:
 
 ```bash
 # List & inspect available BLE devices
-uv run .\simplepyble_test.py
+uv run ./simplepyble_test.py
 
 # Deeper inspection
-uv run .\service_discovery.py mac_address_you_got_from_above
+uv run ./service_discovery.py mac_address_you_got_from_above
 ```
+
+#### LEDnetWF020027A5A9B7 sunset lamp
+
+I'm playing with the sunset lamp in a notebook:
+
+1. `uv sync`
+2. Open `sunset_lamp.ipynb` in VS Code
+3. You should be able to run stuff. Set `address` to the MAC address from `./simplepyble_test.py` above.
+
 
 ## Background
 

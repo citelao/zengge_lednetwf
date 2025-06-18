@@ -6,5 +6,6 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "bleak>=0.22.3",
+    "ipykernel>=6.29.5",
     "simplepyble>=0.10.1",
 ]
