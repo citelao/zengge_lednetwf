@@ -23,6 +23,8 @@ ADDRESS = (
 
 
 async def main(address):
+    logger.info(f"Connecting to {address}...")
+
     async with BleakClient(address) as client:
         logger.info(f"Connected: {client.is_connected}")
 

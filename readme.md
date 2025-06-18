@@ -8,11 +8,25 @@ Might also be known as:
 
 There are other ZENGGE devices with similar names. For example, there are small black USB Bluetooth LED controllers bundled with light strips, which can be used with any WS2812B lights with 3-pin connector. They show up as "LEDnetWF0200A3" plus the last six digits of their MAC. While the app uses different commands than those below, they will still accept some of them (namely on/off, HSL colors and symphony, but with only 100 effects).
 
-## Home Assistant Integration
+## Usage
+
+### Home Assistant Integration
 
 Check out @raulgbcr project to add support for these lights to Home Assistant:  https://github.com/raulgbcr/lednetwf_ble
 
 We've got a pretty decent integration going, and it's getting updated fairly regularly.  Contributions very welcome.
+
+### This repo
+
+For development, you can use `uv`:
+
+```bash
+# List & inspect available BLE devices
+uv run .\simplepyble_test.py
+
+# Deeper inspection
+uv run .\service_discovery.py mac_address_you_got_from_above
+```
 
 ## Background
 

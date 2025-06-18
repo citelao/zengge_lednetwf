@@ -363,7 +363,7 @@ elif len(sys.argv) > 1 and sys.argv[1] == "--connect":
     peripherals = adapter.scan_get_results()
     pass
     for peripheral in peripherals:
-        ring  = "08:65:F0:0C:DA:81"
+        ring  = "08:65:f0:a5:a9:b7"
         strip = "08:65:F0:62:B0:5B"
         if peripheral.identifier().startswith("LEDnetWF") and peripheral.address() == ring:
             # this will do
